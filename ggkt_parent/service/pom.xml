@@ -12,6 +12,7 @@
 
     <modules>
         <module>service_vod</module>
+        <module>service_user</module>
     </modules>
 
     <packaging>pom</packaging>

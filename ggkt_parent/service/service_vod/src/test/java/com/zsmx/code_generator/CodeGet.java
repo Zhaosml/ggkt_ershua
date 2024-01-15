@@ -13,6 +13,7 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
  * @date 2023/12/30 21:10
  */
 public class CodeGet {
+    //TODO Mybatis代码生成器
     public static void main(String[] args) {
 
         // 1、创建代码生成器
@@ -23,7 +24,7 @@ public class CodeGet {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         //gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setOutputDir("/Users/ikun/Documents/复习/ggkt_ershua/ggkt_parent/service/service_vod"+"/src/main/java");
+        gc.setOutputDir("/Users/ikun/Documents/复习/ggkt_ershua/ggkt_parent/service/service_user"+"/src/main/java");
 
         gc.setServiceName("%sService");	//去掉Service接口的首字母I
         gc.setAuthor("zsmx");
@@ -32,7 +33,7 @@ public class CodeGet {
 
         // 3、数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/glkt_vod");
+        dsc.setUrl("jdbc:mysql://localhost:3306/glkt_user");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("204317");
@@ -41,10 +42,10 @@ public class CodeGet {
 
         // 4、包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("vod"); //模块名
+        pc.setModuleName("user"); //模块名
         pc.setParent("com.zsmx");
         pc.setController("controller");
-        pc.setEntity("entity");
+        //pc.setEntity("entity");
         pc.setService("service");
         pc.setMapper("mapper");
         mpg.setPackageInfo(pc);
@@ -52,7 +53,7 @@ public class CodeGet {
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
-        strategy.setInclude("video_visitor");//这里该成自己数据库的表名
+        strategy.setInclude("user_info");//这里该成自己数据库的表名
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 
